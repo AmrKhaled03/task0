@@ -1,0 +1,52 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+
+body{
+    font-family: sans-serif;
+scroll-behavior: smooth;
+width: 100%;
+background-color: white;
+}
+.funny-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FF5733;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Fun animation when hovering over the button */
+.funny-button:hover {
+    background-color: #33FF57;
+    transform: rotate(360deg);
+    transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Fun emoji added to the button */
+.funny-button::before {
+    content: '😄';
+    margin-right: 10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
